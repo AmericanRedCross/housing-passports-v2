@@ -7,6 +7,7 @@ COUNTRY=dominica
 PG_CONNECTION=postgresql://postgres:1234@hpdb:5432/db_passport
 neighborhoods=(n1 n2 n3 n4 n5 n6 n7 n8 n9 n10)
 # neighborhoods=(n1)
+neighborhoods=(my_hood)
 
 export TF_CPP_MIN_LOG_LEVEL=2
 export CUDA_VISIBLE_DEVICES=""
