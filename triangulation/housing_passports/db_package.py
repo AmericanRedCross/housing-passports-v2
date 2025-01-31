@@ -79,7 +79,8 @@ def add_buildings(geomfile_fpath, session):
             centroid = geom.Centroid().GetPoint()
 
             session.add(Building(footprint=geom.ExportToWkt(),
-                                 neighborhood=feat.GetField('neighborho'),  # neighborhood, TODO Fix later
+                                 # neighborhood=feat.GetField('neighborho'),  # neighborhood, TODO Fix later
+                                 neighborhood="my_hood",  # neighborhood, TODO Fix later
                                  lon=centroid[0],
                                  lat=centroid[1],
                                  building_metadata=feat.items(),
