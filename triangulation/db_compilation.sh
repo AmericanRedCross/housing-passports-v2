@@ -16,8 +16,8 @@ mkdir -p $outputDir
 # ## Dowload files input files from s3 
 # ##############################################################
 #Change the s3 names of the file paths to download the building footprint and inference results.
-aws s3 sync s3://hp-deliverables-v2/files_for_db_comp_r1_l3/ ${inputDir}/
-aws s3 sync s3://hp-deliverables-v2/dominica_buildings/building_simplified_by_aoi/ $inputDir/dominica_buildings/
+# aws s3 sync s3://hp-deliverables-v2/files_for_db_comp_r1_l3/ ${inputDir}/
+# aws s3 sync s3://hp-deliverables-v2/dominica_buildings/building_simplified_by_aoi/ $inputDir/dominica_buildings/
 
 # ##############################################################
 # ## Import Files into DB
