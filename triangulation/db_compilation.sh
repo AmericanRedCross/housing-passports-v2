@@ -25,7 +25,7 @@ mkdir -p $outputDir
 
 passport_db_export ${PG_CONNECTION} \
   --trajectory-fpath=$inputDir/trajectory.csv \
-  --geomfile-fpath=$inputDir/dominica_buildings/building_simplified.shp \
+  --geomfile-fpath=$inputDir/dominica_buildings/01_osm_buildings.geojson \
   --parts-inference-fpath=$inputDir/parts_inference_file.json \
   --props-inference-fpath=$inputDir/props_inference_file.json \
   --parts-map-fpath=$inputDir/parts_map_file.pbtxt \
