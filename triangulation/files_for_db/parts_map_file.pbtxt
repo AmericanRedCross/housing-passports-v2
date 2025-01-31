@@ -1,0 +1,80 @@
+item {
+  id: 1
+  name: 'part_1'
+}
+item {
+  id: 2
+  name: 'part_2'
+}
+item {
+  id: 3
+  name: 'part_3'
+}
+item {
+  id: 4
+  name: 'part_4'
+}
+item {
+  id: 5
+  name: 'part_5'
+}
+item {
+  id: 6
+  name: 'part_6'
+}
+item {
+  id: 7
+  name: 'part_7'
+}
+item {
+  id: 8
+  name: 'part_8'
+}
+item {
+  id: 9
+  name: 'part_9'
+}
+item {
+  id: 10
+  name: 'part_10'
+}
+item {
+  id: 11
+  name: 'part_11'
+}
+item {
+  id: 12
+  name: 'part_12'
+}
+item {
+  id: 13
+  name: 'part_13'
+}
+item {
+  id: 14
+  name: 'part_14'
+}
+item {
+  id: 15
+  name: 'part_15'
+}
+item {
+  id: 16
+  name: 'part_16'
+}
+item {
+  id: 17
+  name: 'part_17'
+}
+item {
+  id: 18
+  name: 'part_18'
+}
+item {
+  id: 19
+  name: 'part_19'
+}
+item {
+  id: 20
+  name: 'part_20'
+}
