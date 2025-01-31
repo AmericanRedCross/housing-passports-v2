@@ -30,6 +30,17 @@ class DBTests(unittest.TestCase):
         add_images(self.trajectory_fpath, self.session)
         self.session.commit()
 
+    def test_export_to_db(self):
+        export_to_db(
+            self.db_url,
+            self.trajectory_fpath,
+            self.geomfile_fpath,
+            self.parts_inference_fpath,
+            self.props_inference_fpath,
+            self.parts_map_fpath,
+            self.props_map_fpath,
+        )
+
 
 class Tests(unittest.TestCase):
     @classmethod
