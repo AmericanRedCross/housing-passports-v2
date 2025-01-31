@@ -326,29 +326,29 @@ def distill_building_metadata(db_url, fpath_parts, fpath_property_groups,
     session.commit()
 
 
-@click.command(short_help="Dump images, trajectories, buildings, and detections into a database.")
-@click.argument('db-url', nargs=1)
-@click.option("--trajectory-fpath", type=click.Path(exists=True),
-              help="CSV file containing GPS trajectory info for each image")
-@click.option("--geomfile-fpath", type=click.Path(exists=True),
-              help="Shapefile or geojson containing building footprints")
-# @click.option("--neighborhood", type=str,
-#               help="Name of neighborhood to store in DB for all detections.")
-# @click.option("--neighborhood-dir", type=click.Path(exists=True),
-#               help="Neighborhxood directory with subfolders containing ML predictions.")
-@click.option("--parts-inference-fpath", type=click.Path(exists=True),
-              help="Json file with all containing ML predictions for buuilding parts.")
-@click.option("--props-inference-fpath", type=click.Path(exists=True),
-              help="Json file with all containing ML predictions for buuilding parts.")
-@click.option("--parts-map-fpath", type=click.Path(exists=True),
-              help="PBTXT file mapping building parts class IDs to strings")
-@click.option("--props-map-fpath", type=click.Path(exists=True),
-              help="PBTXT file mapping building properties class IDs to strings")
-@click.option('--det_classes', type=str, default=None, multiple=True,
-              help='Property classes to include (e.g., "window", "pre_1940").')
+# @click.command(short_help="Dump images, trajectories, buildings, and detections into a database.")
+# @click.argument('db-url', nargs=1)
+# @click.option("--trajectory-fpath", type=click.Path(exists=True),
+#               help="CSV file containing GPS trajectory info for each image")
+# @click.option("--geomfile-fpath", type=click.Path(exists=True),
+#               help="Shapefile or geojson containing building footprints")
+# # @click.option("--neighborhood", type=str,
+# #               help="Name of neighborhood to store in DB for all detections.")
+# # @click.option("--neighborhood-dir", type=click.Path(exists=True),
+# #               help="Neighborhxood directory with subfolders containing ML predictions.")
+# @click.option("--parts-inference-fpath", type=click.Path(exists=True),
+#               help="Json file with all containing ML predictions for buuilding parts.")
+# @click.option("--props-inference-fpath", type=click.Path(exists=True),
+#               help="Json file with all containing ML predictions for buuilding parts.")
+# @click.option("--parts-map-fpath", type=click.Path(exists=True),
+#               help="PBTXT file mapping building parts class IDs to strings")
+# @click.option("--props-map-fpath", type=click.Path(exists=True),
+#               help="PBTXT file mapping building properties class IDs to strings")
+# @click.option('--det_classes', type=str, default=None, multiple=True,
+#               help='Property classes to include (e.g., "window", "pre_1940").')
 def export_to_db(db_url, trajectory_fpath, geomfile_fpath,
                  parts_inference_fpath, props_inference_fpath, parts_map_fpath, props_map_fpath,
-                 det_classes):
+                 det_classes=None):
     """Export housing passport information to a database.
 
     Parameters
