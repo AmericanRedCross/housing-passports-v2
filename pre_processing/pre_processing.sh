@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -ex
+
 outputDir=data
 mkdir -p $outputDir
 mkdir -p ${outputDir}/images_new
@@ -10,11 +12,11 @@ spherical2imagesdocker="docker run -v $PWD:/mnt/ -e MAPILLARY_ACCESS_TOKEN=$MAPI
 $geokitdocker get_mapillary_points \
    --input_aoi=112.748232,-7.304144,112.755635,-7.298302 \
    --organization_ids=1606999786835974 \
+   --timestamp_from=1727808786000 \
    --only_pano \
    --output_file_point=${outputDir}/mapillary_points_panoramic__pano.geojson \
    --output_file_sequence=${outputDir}/mapillary_sequences_panoramic__pano.geojson
 
-   # --timestamp_from=1729641600000 \
 
 $spherical2imagesdocker clip_mapillary_pano \
   --input_file_points=${outputDir}/mapillary_points_panoramic__pano__pano.geojson \
