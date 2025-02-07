@@ -23,4 +23,4 @@ $spherical2imagesdocker clip_mapillary_pano \
   --image_clip_size=1024 \
   --output_file_points=${outputDir}/mapillary_points_panoramic_process_new.geojson \
   --output_images_path=${outputDir}/images_new \
-  --cube_sides=right,left
+  --cube_sides=front,back
