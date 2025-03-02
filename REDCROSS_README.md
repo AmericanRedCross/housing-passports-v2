@@ -18,3 +18,10 @@ Download the data from mapillary and preprocess it
 ```
 bash pre_processing/pre_processing.sh
 ```
+
+Start and run the object detection inference and clipping notebook
+`redcross_detectron2_workflow.ipynb`
+```
+cd nbs
+jupyter notebook --ip $(hostname -I | awk '{print $1}')
+```
