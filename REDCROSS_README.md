@@ -2,6 +2,7 @@
 
 
 Define your mapillary access token
+https://www.mapillary.com/dashboard/developers
 ```
 export MAPILLARY_ACCESS_TOKEN="MLY|..."
 ```
