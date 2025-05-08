@@ -444,10 +444,10 @@ def export_to_db(db_url, trajectory_fpath, geomfile_fpath,
     print('Done.\n')
 
 
-@click.command(short_help="Link buildings and detections in existing DB.")
-@click.argument('db-url', nargs=1)
-@click.option("--neighborhood", type=str,
-              help="Neighborhood to run matches for.")
+# @click.command(short_help="Link buildings and detections in existing DB.")
+# @click.argument('db-url', nargs=1)
+# @click.option("--neighborhood", type=str,
+#               help="Neighborhood to run matches for.")
 def link_db_detections(db_url, neighborhood):
     """Link object detections to building footprints in existing DB.
     Also, consolidates building properties into metadata.
