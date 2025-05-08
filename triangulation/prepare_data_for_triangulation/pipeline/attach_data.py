@@ -2,6 +2,7 @@
 Script for merge original data and detections
 """
 import json
+import os
 
 from utils.utils import (
     read_geojson,
@@ -146,7 +147,7 @@ def combine_resources(
     # group csv data
     csv_groups = {}
     for box in tqdm(csv_predictions_data, desc="group csv data"):
-        fake_key = box.get("image_name").strip()
+        fake_key = os.path.splitext(box.get("image_name").strip())[0]
         box["boxes"] = json.loads(box.get("boxes"))
         box["boxes_float"] = json.loads(box.get("boxes_float", "[]"))
         box["boxes_int"] = json.loads(box.get("boxes_int", "[]"))
