@@ -74,6 +74,22 @@ def include_geom(features, features_area):
     return features
 
 
+def add_image_path(features):
+    """Create image_path from sequence_id and id."""
+    for feature in features:
+        props = feature["properties"]
+        image_id = props["id"]
+        sequence_id = props["sequence_id"]
+        data_dir = "mapillary_images_new"
+        image_path = os.path.join(
+                data_dir,
+                sequence_id,
+                "right",
+                str(image_id)+"_right",)
+        props["image_path"] = image_path
+    return features
+
+
 def combine_resources(
     predictions_csv,
     original_geojson,
@@ -120,6 +136,8 @@ def combine_resources(
 
     features_all = include_geom(features__, features_areas__)
     features = rm_geom(features_all)
+
+    features = add_image_path(features)
 
     # df_polygons = gpd.read_file(gpkg_buildings_file)
 
