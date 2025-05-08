@@ -1,80 +1,80 @@
 item {
   id: 1
-  name: 'prop_1'
+  name: 'complete'
 }
 item {
   id: 2
-  name: 'prop_2'
+  name: 'incomplete'
 }
 item {
   id: 3
-  name: 'prop_3'
+  name: 'poor'
 }
 item {
   id: 4
-  name: 'prop_4'
+  name: 'fair'
 }
 item {
   id: 5
-  name: 'prop_5'
+  name: 'good'
 }
 item {
   id: 6
-  name: 'prop_6'
+  name: 'mix-other-unclear'
 }
 item {
   id: 7
-  name: 'prop_7'
+  name: 'brick_or_cement-concrete_block'
 }
 item {
   id: 8
-  name: 'prop_8'
+  name: 'wood_polished'
 }
 item {
   id: 9
-  name: 'prop_9'
+  name: 'stone_with_mud-ashlar_with_lime_or_cement'
 }
 item {
   id: 10
-  name: 'prop_10'
+  name: 'corrugated_metal'
 }
 item {
   id: 11
-  name: 'prop_11'
+  name: 'wood_crude-plank'
 }
 item {
   id: 12
-  name: 'prop_12'
-}
-item {
-  id: 13
-  name: 'prop_13'
-}
-item {
-  id: 14
-  name: 'prop_14'
-}
-item {
-  id: 15
-  name: 'prop_15'
-}
-item {
-  id: 16
-  name: 'prop_16'
-}
-item {
-  id: 17
-  name: 'prop_17'
-}
-item {
-  id: 18
-  name: 'prop_18'
+  name: 'container-trailer'
 }
 item {
   id: 19
-  name: 'prop_19'
+  name: 'plaster'
 }
 item {
   id: 20
-  name: 'prop_20'
+  name: 'adobe'
+}
+item {
+  id: 13
+  name: 'secured'
+}
+item {
+  id: 14
+  name: 'unsecured'
+}
+item {
+  id: 15
+  name: 'residential'
+}
+item {
+  id: 16
+  name: 'critical_infrastructure'
+}
+item {
+  id: 17
+  name: 'mixed'
+}
+item {
+  id: 18
+  name: 'commercial'
 }

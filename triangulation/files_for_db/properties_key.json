@@ -1,0 +1,32 @@
+{
+  "complete": [
+    "complete",
+    "incomplete"
+  ],
+  "condition": [
+    "poor",
+    "fair",
+    "good"
+  ],
+  "material": [
+    "mix-other-unclear",
+    "brick_or_cement-concrete_block",
+    "wood_polished",
+    "stone_with_mud-ashlar_with_lime_or_cement",
+    "corrugated_metal",
+    "wood_crude-plank",
+    "container-trailer",
+    "plaster",
+    "adobe"
+  ],
+  "security": [
+    "secured",
+    "unsecured"
+  ],
+  "use": [
+    "residential",
+    "critical_infrastructure",
+    "mixed",
+    "commercial"
+  ]
+}

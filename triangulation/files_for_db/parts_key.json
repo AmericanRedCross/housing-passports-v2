@@ -1,0 +1,8 @@
+{
+  "parts": [
+    "window",
+    "door",
+    "garage",
+    "disaster_mitigation"
+  ]
+}
