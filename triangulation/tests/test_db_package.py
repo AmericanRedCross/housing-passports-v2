@@ -10,14 +10,14 @@ from housing_passports.db_package import (
 )
 
 
-class DBTests(unittest.TestCase):
+class DBExportTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.db_url = "postgresql://postgres:1234@hpdb:5432/db_passport"
         cls.session = _get_session(cls.db_url)
         input_dir = "files_for_db"
         cls.geomfile_fpath = input_dir + "/dominica_buildings/01_osm_buildings.geojson"
-        cls.trajectory_fpath = input_dir + "/trajectory.csv"
+        cls.trajectory_fpath = input_dir + "/trajectory_rc.csv"
         cls.parts_inference_fpath = input_dir + "/parts_inference_file.json"
         cls.props_inference_fpath = input_dir + "/props_inference_file.json"
         cls.parts_map_fpath = input_dir + "/parts_map_file.pbtxt"
