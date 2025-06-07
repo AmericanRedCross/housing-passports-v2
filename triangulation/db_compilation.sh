@@ -31,6 +31,7 @@ passport_db_export ${PG_CONNECTION} \
   --props-inference-fpath=$inputDir/props_inference_file.json \
   --parts-map-fpath=$inputDir/parts_map_file.pbtxt \
   --props-map-fpath=$inputDir/props_map_file.pbtxt
+exit
 
 # ##############################################################
 # ## Linking detections to buildings in database

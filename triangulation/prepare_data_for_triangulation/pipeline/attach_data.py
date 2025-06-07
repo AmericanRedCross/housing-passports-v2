@@ -146,6 +146,8 @@ def combine_resources(
     print("total_csv", len(csv_predictions_data))
     # group csv data
     csv_groups = {}
+    print()
+    print("csv fake keys")
     for box in tqdm(csv_predictions_data, desc="group csv data"):
         fake_key = os.path.splitext(box.get("image_name").strip())[0]
         box["boxes"] = json.loads(box.get("boxes"))
@@ -155,7 +157,10 @@ def combine_resources(
         if not csv_groups.get(fake_key):
             csv_groups[fake_key] = []
         csv_groups[fake_key].append(box)
+        print(fake_key)
 
+    dummy_fake_key = list(csv_groups.keys())[0]
+    print("feature fake keys")
     for feature in tqdm(features, desc="merge features and csv"):
         props = feature.get("properties")
         # side = props.get("image_path").split("_")[-1].split(".")[0]
@@ -168,6 +173,10 @@ def combine_resources(
         props["compass_angle_fix"] = compass_angle_
         fake_key = props.get("image_path", "").split("mapillary_images_new/")[1].strip()
         props["boxes"] = csv_groups.get(fake_key, [])
+        print(fake_key)
+        if dummy_fake_key == fake_key:
+            print(fake_key)
+            # breakpoint()
 
     write_geojson(geojson_merge_output, features)
     # housing_passports formats

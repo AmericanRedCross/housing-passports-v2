@@ -279,14 +279,14 @@ def _load_detections(det_data, class_map):
     return det_data
 
 
-@click.command(short_help="Populate each building's metadata field using pre-attached detections.")
-@click.argument('db-url', nargs=1)
-@click.option("--fpath-parts", type=click.Path(exists=True),
-              help="JSON file containing a list of building parts under `parts` key.")
-@click.option("--fpath-property-groups", type=click.Path(exists=True),
-              help="JSON file containing a dictionary of property names and included keys.")
-@click.option("--neighborhood", type=str,
-              help="Name of neighborhood to store in DB for all detections.")
+# @click.command(short_help="Populate each building's metadata field using pre-attached detections.")
+# @click.argument('db-url', nargs=1)
+# @click.option("--fpath-parts", type=click.Path(exists=True),
+#               help="JSON file containing a list of building parts under `parts` key.")
+# @click.option("--fpath-property-groups", type=click.Path(exists=True),
+#               help="JSON file containing a dictionary of property names and included keys.")
+# @click.option("--neighborhood", type=str,
+#               help="Name of neighborhood to store in DB for all detections.")
 def distill_building_metadata(db_url, fpath_parts, fpath_property_groups,
                               neighborhood):
     """Helper to distill all building detections into metadata."""
@@ -516,16 +516,16 @@ def link_db_detections(db_url, neighborhood):
     session.commit()
 
 
-@click.command(short_help="Export detections as geojson linestrings.")
-@click.argument('db-url', nargs=1)
-@click.option('--save-fpath', type=str, default='rays.geojson',
-              help='Filepath of geojson file to save information to.')
-@click.option('--neighborhood', type=str,
-              help='Neighborhood to run matches for.')
-@click.option('--det_class', type=str, default=None, multiple=True,
-              help='Property classes to include (e.g., "window").')
-@click.option('--linked-dets-only', type=bool, default=True,
-              help='Whether or not to only include detections successfully linked to a building.')
+# @click.command(short_help="Export detections as geojson linestrings.")
+# @click.argument('db-url', nargs=1)
+# @click.option('--save-fpath', type=str, default='rays.geojson',
+#               help='Filepath of geojson file to save information to.')
+# @click.option('--neighborhood', type=str,
+#               help='Neighborhood to run matches for.')
+# @click.option('--det_class', type=str, default=None, multiple=True,
+#               help='Property classes to include (e.g., "window").')
+# @click.option('--linked-dets-only', type=bool, default=True,
+#               help='Whether or not to only include detections successfully linked to a building.')
 def export_detection_geometry(db_url, save_fpath, neighborhood, det_class,
                               linked_dets_only):
     """Generate geojson consisting of linestrings, one per ML detection
