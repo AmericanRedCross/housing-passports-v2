@@ -1,3 +1,4 @@
+import os
 import json
 import unittest
 
@@ -109,7 +110,10 @@ class ExportDetectionGeometryTests(unittest.TestCase):
         cls.neighborhood = "my_hood"
         cls.linked_dets_only = True
         out_dir = "triangulation_results"
-        cls.save_fpath = f"{out_dir}/detections_ray/{cls.neighborhood}_lines_ok.geojson"
+        cls.save_dir = f"{out_dir}/detections_ray/"
+        os.makedirs(cls.save_dir, exist_ok=True)
+        cls.save_fpath = f"{cls.save_dir}/{cls.neighborhood}_lines_ok.geojson"
+
         cls.neighborhood = "my_hood"
         # I think should be all the class names
         cls.det_classes = [
