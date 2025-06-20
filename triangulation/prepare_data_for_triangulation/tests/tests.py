@@ -1,3 +1,4 @@
+import os
 import unittest
 
 from pipeline.attach_data import (
@@ -16,6 +17,7 @@ class AttachDataTests(unittest.TestCase):
         data_out = "data"
         data_prepared = f"{ data_out }/files_for_db"
         shp_out = f"{ data_prepared }/shp_building"
+        os.makedirs(data_prepared, exist_ok=True)
 
         cls.predictions_csv = f"{ data_out }/all_predictions_with_scores.csv"
         cls.predictions_csv = f"{ data_out }/predictions.csv"
