@@ -1,0 +1,3 @@
+[submodule "spherical2images"]
+	path = spherical2images
+	url = git@github.com:funkyrailroad/spherical2images.git
