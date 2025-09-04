@@ -82,11 +82,24 @@ def add_image_path(features):
         image_id = props["id"]
         sequence_id = props["sequence_id"]
         data_dir = "mapillary_images_new"
+
+        # this is for formatting like in original predictions.csv
+        # side = "right"
+        # image_path = os.path.join(
+        #         data_dir,
+        #         sequence_id,
+        #         side,
+        #         str(image_id)+f"_{side}",)
+
+
+        # this is for formatting like in predictions_rc.csv
+        # NOTE: the difference is because of some difference in  how the files are downloaded
         image_path = os.path.join(
                 data_dir,
                 sequence_id,
-                "right",
                 str(image_id)+"_right",)
+
+
         props["image_path"] = image_path
     return features
 
