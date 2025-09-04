@@ -205,7 +205,8 @@ def combine_resources(
         neighborhood_ = props.get("neighborhood")
 
         image_path_ = "/".join([prefix_path_images, *path_seq[-3:-1]])
-        cam = IMAGE_SIDE.get(path_seq[-2], 0)
+        # cam = IMAGE_SIDE.get(path_seq[-2], 0)  # for original predictions.csv
+        cam = IMAGE_SIDE.get(path_seq[-1].split("_")[-1], 0)  # for predictions_rc.csv
         frame = image_name.split(".")[0]
         trajectory = {
             "heading[deg]": props.get("compass_angle_fix"),
