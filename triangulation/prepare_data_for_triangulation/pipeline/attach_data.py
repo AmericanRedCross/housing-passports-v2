@@ -186,10 +186,8 @@ def combine_resources(
         props["compass_angle_fix"] = compass_angle_
         fake_key = props.get("image_path", "").split("mapillary_images_new/")[1].strip()
         props["boxes"] = csv_groups.get(fake_key, [])
-        print(fake_key)
         if dummy_fake_key == fake_key:
             print(fake_key)
-            # breakpoint()
 
     write_geojson(geojson_merge_output, features)
     # housing_passports formats
