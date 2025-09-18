@@ -21,8 +21,16 @@ class DBExportTests(unittest.TestCase):
         input_dir = "files_for_db"
         cls.geomfile_fpath = input_dir + "/dominica_buildings/01_osm_buildings.geojson"
         cls.trajectory_fpath = input_dir + "/trajectory_rc.csv"
+        cls.trajectory_fpath = input_dir + "/trajectory_rc_left.csv"
+        cls.trajectory_fpath = input_dir + "/trajectory_rc_right.csv"
+
         cls.parts_inference_fpath = input_dir + "/parts_inference_file.json"
         cls.props_inference_fpath = input_dir + "/props_inference_file.json"
+        cls.parts_inference_fpath = input_dir + "/parts_inference_file_left.json"
+        cls.props_inference_fpath = input_dir + "/props_inference_file_left.json"
+        cls.parts_inference_fpath = input_dir + "/parts_inference_file_right.json"
+        cls.props_inference_fpath = input_dir + "/props_inference_file_right.json"
+
         cls.parts_map_fpath = input_dir + "/parts_map_file.pbtxt"
         cls.props_map_fpath = input_dir + "/props_map_file.pbtxt"
 

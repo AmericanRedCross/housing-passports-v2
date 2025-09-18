@@ -21,6 +21,10 @@ class AttachDataTests(unittest.TestCase):
 
         cls.predictions_csv = f"{ data_out }/all_predictions_with_scores.csv"
         cls.predictions_csv = f"{ data_out }/predictions.csv"
+        cls.predictions_csv = f"{ data_out }/predictions_rc.csv"
+        cls.predictions_csv = f"{ data_out }/predictions_rc_left.csv"
+        cls.predictions_csv = f"{ data_out }/predictions_rc_right.csv"
+
         # cls.original_geojson = f"{ data_out }/01_osm_buildings.geojson"
         # cls.original_geojson = f"{ data_out }/mapillary_points_panoramic__pano__pano.geojson"
         cls.original_geojson = f"{ data_out }/mapillary_points_panoramic_process_new.geojson"
@@ -30,10 +34,21 @@ class AttachDataTests(unittest.TestCase):
         cls.neighborhood = f"{ data_out }/01_bounds_polygon.geojson"
         cls.shp_buildings_file = f"{ shp_out }/shp_building.shp"
         cls.geojson_merge_output = f"{ data_prepared }/annotation_merge.geojson"
+        cls.geojson_merge_output = f"{ data_prepared }/annotation_merge_left.geojson"
+        cls.geojson_merge_output = f"{ data_prepared }/annotation_merge_right.geojson"
+
         cls.csv_output_trajectory = f"{ data_prepared }/trajectory_rc.csv"
+        cls.csv_output_trajectory = f"{ data_prepared }/trajectory_rc_left.csv"
+        cls.csv_output_trajectory = f"{ data_prepared }/trajectory_rc_right.csv"
+
         cls.props_inference_file = f"{ data_prepared }/props_inference_file.json"
-        cls.props_map_file = f"{ data_prepared }/props_map_file.pbtxt"
         cls.parts_inference_file = f"{ data_prepared }/parts_inference_file.json"
+        cls.props_inference_file = f"{ data_prepared }/props_inference_file_left.json"
+        cls.parts_inference_file = f"{ data_prepared }/parts_inference_file_left.json"
+        cls.props_inference_file = f"{ data_prepared }/props_inference_file_right.json"
+        cls.parts_inference_file = f"{ data_prepared }/parts_inference_file_right.json"
+
+        cls.props_map_file = f"{ data_prepared }/props_map_file.pbtxt"
         cls.parts_map_file = f"{ data_prepared }/parts_map_file.pbtxt"
         cls.props_keys_file = f"{ data_prepared }/properties_key.json"
         cls.part_keys_file = f"{ data_prepared }/parts_key.json"
