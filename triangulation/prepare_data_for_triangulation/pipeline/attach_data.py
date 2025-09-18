@@ -170,7 +170,6 @@ def combine_resources(
         if not csv_groups.get(fake_key):
             csv_groups[fake_key] = []
         csv_groups[fake_key].append(box)
-        print(fake_key)
 
     dummy_fake_key = list(csv_groups.keys())[0]
     print("feature fake keys")
